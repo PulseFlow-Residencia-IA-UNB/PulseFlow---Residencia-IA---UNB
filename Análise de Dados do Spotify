@@ -1,1 +1,70 @@
-# PulseFlow---Residencia-IA---UNB
+🎧 PulseFlow
+
+Sua música acompanha o seu momento.
+
+PulseFlow é um projeto de análise de dados e produto que explora como usar dados musicais, contexto de atividade e preferências do usuário para criar playlists adaptativas, que mudam automaticamente de acordo com o que a pessoa está fazendo (treinando, estudando, relaxando ou trabalhando).
+O projeto usa o Spotify Dataset como base para entender quais características musicais diferenciam cada contexto, e planeja evoluir para usar sinais de smartwatch (frequência cardíaca, atividade) para ajustar a intensidade musical em tempo real.
+
+
+📌 O problema
+Hoje, sistemas de recomendação genéricos deixam os usuários frustrados: eles perdem tempo escolhendo playlists manualmente para cada momento, e músicas com "vibe" ou volume errados quebram o fluxo de atividades como treino ou trabalho focado.
+
+
+- Sistema de recomendação atual não considera o contexto da atividade
+- Usuários gastam tempo procurando a música certa para o momento certo
+- Falta uma curadoria que se adapte automaticamente à rotina
+
+
+👥 Público-alvo
+- Usuários ativos do Spotify
+- Pessoas que precisam de música no dia a dia (trabalho, estudo, treino)
+- Profissionais que dão aulas ou trabalham usando música como ferramenta
+
+
+💡 A solução
+Usar o Spotify Dataset para construir uma solução que recomenda playlists de acordo com o contexto do usuário — e, no futuro, também com base em sensores de smartwatch (frequência cardíaca, intensidade de atividade), oferecendo uma curadoria mais personalizada dentro do próprio Spotify.
+
+
+🎯 Como medimos sucesso
+- Ter a ideia de um produto final viável
+- Queda na taxa de skip logo após a troca automática de playlist
+- Uso contínuo da ferramenta
+
+❓ Guiding Questions do projeto
+Como usar dados musicais, contexto e preferências para criar playlists adaptativas?
+
+#     Pergunta	
+GQ1 — Dados	Quais características musicais melhor diferenciam músicas para Treino, Estudo, Relaxamento e Trabalho?	✅ Responder já
+GQ2 — Usuário	As preferências musicais mudam de acordo com a atividade realizada?	✅ Responder já
+GQ3 — Trabalho	O perfil musical ideal varia conforme o tipo de trabalho (programação, design, atendimento etc.)?	✅ Responder já
+GQ4 — Smartwatch	Atividade + sinais do smartwatch podem ajudar a decidir quando aumentar, manter ou reduzir a intensidade musical?	🔵 Planejar
+GQ5 — Ambiente	Em quais situações a detecção de conversa deve reduzir o volume sem atrapalhar a experiência?	❌ Fora do escopo do MVP
+GQ6 — ML	Um modelo baseado nas características musicais recomenda melhor do que uma seleção aleatória?	🔵 Planejar
+GQ7 — Ética	Quais dados são realmente necessários para personalizar a música sem invadir a privacidade do usuário?	🟡 Se sobrar tempo
+Foco do MVP: Treino • Estudo • Relaxamento • Trabalho personalizado
+
+⚠️ Riscos identificados
+Riscos: 
+- Contexto de exercício não tem rótulo no dataset	(IMPACTO: ALTO) - Mitigação: Validar via GQ7 — proxy por escuta cega antes de depender dele
+- FC (frequência cardíaca) não separa foco de relaxamento	(IMPACTO ALTO) - Mitigação: Assumido no escopo; entrada manual ou heurística de horário para o eixo cognitivo
+- Restrições da API do Spotify (IMPACTO MÉDIO) - Mitigação: Índice offline já é independente da API; só a reprodução depende dela
+
+
+🛠️ Tecnologias
+(a definir conforme a análise avança — ex: Python, Pandas, Jupyter Notebook)
+
+
+📊 Análises e resultados
+Em andamento. esta seção será atualizada com o notebook, gráficos e principais insights assim que a análise do dataset estiver concluída.
+
+
+🚀 Como rodar o projeto
+(a preencher com os passos de instalação e execução assim que o notebook estiver pronto)
+
+
+📋 Gestão do projeto
+Board de desenvolvimento no Jira (projeto SD), brainstorming completo no Miro, python, panda.
+
+
+✍️ Autoria
+Desenvolvido por Jhessica Evelyn, Marjorie
