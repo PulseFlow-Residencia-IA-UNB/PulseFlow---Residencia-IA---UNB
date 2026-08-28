@@ -34,13 +34,13 @@ Usar o Spotify Dataset para construir uma solução que recomenda playlists de a
 Como usar dados musicais, contexto e preferências para criar playlists adaptativas?
 
 #     Pergunta	
-GQ1 — Dados	Quais características musicais melhor diferenciam músicas para Treino, Estudo, Relaxamento e Trabalho?	✅ Responder já
-GQ2 — Usuário	As preferências musicais mudam de acordo com a atividade realizada?	✅ Responder já
-GQ3 — Trabalho	O perfil musical ideal varia conforme o tipo de trabalho (programação, design, atendimento etc.)?	✅ Responder já
-GQ4 — Smartwatch	Atividade + sinais do smartwatch podem ajudar a decidir quando aumentar, manter ou reduzir a intensidade musical?	🔵 Planejar
-GQ5 — Ambiente	Em quais situações a detecção de conversa deve reduzir o volume sem atrapalhar a experiência?	❌ Fora do escopo do MVP
-GQ6 — ML	Um modelo baseado nas características musicais recomenda melhor do que uma seleção aleatória?	🔵 Planejar
-GQ7 — Ética	Quais dados são realmente necessários para personalizar a música sem invadir a privacidade do usuário?	🟡 Se sobrar tempo
+GQ1 — Dados: Quais características musicais melhor diferenciam músicas para Treino, Estudo, Relaxamento e Trabalho?	✅ Responder já
+GQ2 — Usuário: As preferências musicais mudam de acordo com a atividade realizada?	✅ Responder já
+GQ3 — Trabalho:	O perfil musical ideal varia conforme o tipo de trabalho (programação, design, atendimento etc.)?	✅ Responder já
+GQ4 — Smartwatch:	Atividade + sinais do smartwatch podem ajudar a decidir quando aumentar, manter ou reduzir a intensidade musical?	🔵 Planejar
+GQ5 — Ambiente:	Em quais situações a detecção de conversa deve reduzir o volume sem atrapalhar a experiência?	❌ Fora do escopo do MVP
+GQ6 — ML:	Um modelo baseado nas características musicais recomenda melhor do que uma seleção aleatória?	🔵 Planejar
+GQ7 — Ética: Quais dados são realmente necessários para personalizar a música sem invadir a privacidade do usuário?	🟡 Se sobrar tempo
 Foco do MVP: Treino • Estudo • Relaxamento • Trabalho personalizado
 
 ⚠️ Riscos identificados
