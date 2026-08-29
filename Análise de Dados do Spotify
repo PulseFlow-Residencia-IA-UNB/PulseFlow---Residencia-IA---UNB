@@ -44,7 +44,6 @@ GQ7 — Ética: Quais dados são realmente necessários para personalizar a mús
 Foco do MVP: Treino • Estudo • Relaxamento • Trabalho personalizado
 
 ⚠️ Riscos identificados
-Riscos: 
 - Contexto de exercício não tem rótulo no dataset	(IMPACTO: ALTO) - Mitigação: Validar via GQ7 — proxy por escuta cega antes de depender dele
 - FC (frequência cardíaca) não separa foco de relaxamento	(IMPACTO ALTO) - Mitigação: Assumido no escopo; entrada manual ou heurística de horário para o eixo cognitivo
 - Restrições da API do Spotify (IMPACTO MÉDIO) - Mitigação: Índice offline já é independente da API; só a reprodução depende dela
@@ -67,4 +66,4 @@ Board de desenvolvimento no Jira (projeto SD), brainstorming completo no Miro, p
 
 
 ✍️ Autoria
-Desenvolvido por Jhessica Evelyn, Marjorie Mitzi, Breno, Pedro Alvim e Vitor Gonçalves
+Desenvolvido por Jhessica Evelyn, Marjorie Mitzi, Breno dos Santos, Pedro Alvim e Vitor Gonçalves.
