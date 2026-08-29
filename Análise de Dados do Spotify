@@ -22,7 +22,7 @@ Hoje, sistemas de recomendação genéricos deixam os usuários frustrados: eles
 
 
 💡 A solução
-Usar o Spotify Dataset para construir uma solução que recomenda playlists de acordo com o contexto do usuário — e, no futuro, também com base em sensores de smartwatch (frequência cardíaca, intensidade de atividade), oferecendo uma curadoria mais personalizada dentro do próprio Spotify.
+Usar o Spotify Dataset para construir uma solução que recomenda playlists de acordo com o contexto do usuário, e, no futuro, também com base em sensores de smartwatch (frequência cardíaca, intensidade de atividade), oferecendo uma curadoria mais personalizada dentro do próprio Spotify.
 
 
 🎯 Como medimos sucesso
@@ -67,4 +67,4 @@ Board de desenvolvimento no Jira (projeto SD), brainstorming completo no Miro, p
 
 
 ✍️ Autoria
-Desenvolvido por Jhessica Evelyn, Marjorie
+Desenvolvido por Jhessica Evelyn, Marjorie Mitzi, Breno, Pedro Alvim e Vitor Gonçalves
