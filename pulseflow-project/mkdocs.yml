@@ -1,0 +1,13 @@
+site_name: PulseFlow
+site_description: A música certa, no momento certo.
+theme:
+  name: material
+  palette:
+    scheme: slate
+    primary: black
+    accent: green
+nav:
+  - Resumo Executivo: index.md
+  - Produto e UX: produto.md
+  - Planejamento e GQs: investigacao.md
+  - Inteligência Analítica: analise_dados.md
