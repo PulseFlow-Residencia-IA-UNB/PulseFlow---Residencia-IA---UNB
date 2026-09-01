@@ -22,3 +22,11 @@ Para superar a ausência de rótulos de contexto, criamos índices determinísti
 ![Gráficos EDA](assets/fig_distribuicoes.png)
 
 *O código completo de limpeza, processamento e modelagem pode ser encontrado no repositório em `src/notebooks/PulseFlow_Notebook_Corrigido.ipynb`.*
+
+### Visualização de Catálogo Musical e Distribuição Tonal
+Os painéis desenvolvidos permitem a análise em tempo real do perfil sonoro e recortes em foco (como Pop-film, K-pop, Chill).
+
+![Painel de Catálogo Musical](assets/Screenshot from 2026-09-01 15-16-12.jpg)
+![Distribuição Tonal e Duração x Popularidade](assets/Screenshot from 2026-09-01 15-16-15.jpg)
+
+*Os relatórios completos e documentos de status estão disponíveis na pasta `docs/documentos/` do repositório.*

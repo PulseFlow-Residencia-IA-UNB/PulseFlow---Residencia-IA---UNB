@@ -22,3 +22,7 @@ Baseado na metodologia *Challenge Based Learning*, o desenvolvimento foi nortead
 
 **🔴 Cortar Sem Dó (Won't Have - Baixo Impacto / Difícil)**
 7. **Ambiente:** Em quais situações a detecção de conversa próxima deve reduzir o volume sem atrapalhar a experiência? (Complexidade de UX/Permissões alta para o MVP).
+
+### Gestão do Projeto (Jira)
+O acompanhamento das tarefas (criação de repositório, formulários, protótipos e refatoração de dados) foi realizado via Kanban:
+![Board Jira Tarefas Pendentes e Concluídas](assets/Screenshot from 2026-08-28 11-04-04.png)
