@@ -79,7 +79,7 @@ O MVP concentra-se em quatro contextos: **Treino, Estudo, Relaxamento e Trabalho
 
 ## 👥 Colaboradores
 
-Projeto feito por Jhessica Rvelyn [@jhessevelyn](https://github.com/jhessevelyn), Breno dos Santos Guimarães (@Br3n0G)), Marjorie Mitzi (@Marjoriemitzi) e Pedro Alvim (@PedroAlvimm(https://github.com/PedroAlvimm).
+Projeto feito por Jhessica Rvelyn [@jhessevelyn](https://github.com/jhessevelyn), Breno dos Santos Guimarães (@Br3n0G)), Marjorie Mitzi (@Marjoriemitzi), Pedro Alvim (@PedroAlvimm), e Vitor Gonçalves.
 
 ## 📌 Status
 
