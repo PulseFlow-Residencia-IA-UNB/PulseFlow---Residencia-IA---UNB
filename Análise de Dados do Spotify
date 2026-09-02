@@ -1,69 +1,48 @@
-🎧 PulseFlow
+PulseFlow — Residência em IA (UnB)
 
-Sua música acompanha o seu momento.
+PulseFlow é um sistema de playlist adaptativa que sugere músicas automaticamente de acordo com o contexto e a atividade do usuário (treino, estudo, relaxamento ou trabalho), usando o Spotify Dataset como base e, futuramente, sinais de smartwatch para refinar as recomendações.
 
-PulseFlow é um projeto de análise de dados e produto que explora como usar dados musicais, contexto de atividade e preferências do usuário para criar playlists adaptativas, que mudam automaticamente de acordo com o que a pessoa está fazendo (treinando, estudando, relaxando ou trabalhando).
-O projeto usa o Spotify Dataset como base para entender quais características musicais diferenciam cada contexto, e planeja evoluir para usar sinais de smartwatch (frequência cardíaca, atividade) para ajustar a intensidade musical em tempo real.
+Projeto desenvolvido no âmbito da Residência em Inteligência Artificial (parceria com a UnB).
 
+🎯 Objetivo
 
-📌 O problema
-Hoje, sistemas de recomendação genéricos deixam os usuários frustrados: eles perdem tempo escolhendo playlists manualmente para cada momento, e músicas com "vibe" ou volume errados quebram o fluxo de atividades como treino ou trabalho focado.
+Investigar como características musicais (energia, valência, tempo, dançabilidade etc.) se relacionam com diferentes contextos de atividade, para construir um motor de recomendação que ajuste a playlist automaticamente ao que o usuário está fazendo.
 
+🧭 Guiding Questions
 
-- Sistema de recomendação atual não considera o contexto da atividade
-- Usuários gastam tempo procurando a música certa para o momento certo
-- Falta uma curadoria que se adapte automaticamente à rotina
+O projeto foi guiado por 7 perguntas norteadoras, priorizadas por impacto e esforço:
 
+Pergunta	Prioridade
+1 - Quais características musicais predominam em cada contexto?	(Responder já)
+2 - Como a preferência musical muda conforme a atividade?	(Responder já)
+3 - Existe um perfil musical associado a cada tipo de trabalho?	(Responder já)
+4 - Como usar sinais de smartwatch para inferir o contexto?	(Planejar)
+5 -	É possível detectar conversa/volume de ambiente? (Fora do escopo do MVP)
+6 -	Como construir um modelo de recomendação por ML?	(Planejar)
+7 - Quais os cuidados éticos e de privacidade dos dados?	(Se sobrar tempo)
 
-👥 Público-alvo
-- Usuários ativos do Spotify
-- Pessoas que precisam de música no dia a dia (trabalho, estudo, treino)
-- Profissionais que dão aulas ou trabalham usando música como ferramenta
+🚀 Escopo do MVP
+O MVP concentra-se em quatro contextos: Treino, Estudo, Relaxamento e Trabalho personalizado.
 
+📂 Estrutura do repositório
+Arquivo	Descrição
+Análise de Dados do Spotify/	Notebooks e materiais de exploração do Spotify Dataset
+PulseFlow_Notebook.ipynb	Notebook principal de análise
+PulseFlow_Notebook_Corrigido.ipynb	Versão revisada/corrigida do notebook principal
+PulseFlow_Notebook_PF16_Integrado.ipynb	Notebook com a integração referente à etapa PF16
+PulseFlow_Status_Completo_e_Proximos_Passos.docx	Status atual do projeto e próximos passos
+Relátorio PulseFlow.docx	Relatório do projeto (Word)
+pulseflow-spotify-analytics-relatorio.pdf	Relatório final em PDF
+🛠️ Como executar
+Clone o repositório:
+bashgit clone https://github.com/jhessevelyn/PulseFlow---Residencia-IA---UNB.git
+Abra os notebooks (.ipynb) no Jupyter ou Google Colab.
+Consulte PulseFlow_Status_Completo_e_Proximos_Passos.docx para o status mais recente e os próximos passos planejados.
+Consulte Relátorio PulseFlow.docx ou o PDF equivalente para o relatório completo do projeto.
+👥 Colaboradores
 
-💡 A solução
-Usar o Spotify Dataset para construir uma solução que recomenda playlists de acordo com o contexto do usuário, e, no futuro, também com base em sensores de smartwatch (frequência cardíaca, intensidade de atividade), oferecendo uma curadoria mais personalizada dentro do próprio Spotify.
+Projeto feito por Jhessica Evelyn @jhessevelyn, Breno dos Santos Guimarães (@Br3n0G), Marjorie Mitzi e Pedro Alvim (@PedroAlvimm).
 
+📌 Status
 
-🎯 Como medimos sucesso
-- Ter a ideia de um produto final viável
-- Queda na taxa de skip logo após a troca automática de playlist
-- Uso contínuo da ferramenta
-
-❓ Guiding Questions do projeto
-Como usar dados musicais, contexto e preferências para criar playlists adaptativas?
-
-#     Pergunta	
-GQ1 — Dados: Quais características musicais melhor diferenciam músicas para Treino, Estudo, Relaxamento e Trabalho?	✅ Responder já
-GQ2 — Usuário: As preferências musicais mudam de acordo com a atividade realizada?	✅ Responder já
-GQ3 — Trabalho:	O perfil musical ideal varia conforme o tipo de trabalho (programação, design, atendimento etc.)?	✅ Responder já
-GQ4 — Smartwatch:	Atividade + sinais do smartwatch podem ajudar a decidir quando aumentar, manter ou reduzir a intensidade musical?	🔵 Planejar
-GQ5 — Ambiente:	Em quais situações a detecção de conversa deve reduzir o volume sem atrapalhar a experiência?	❌ Fora do escopo do MVP
-GQ6 — ML:	Um modelo baseado nas características musicais recomenda melhor do que uma seleção aleatória?	🔵 Planejar
-GQ7 — Ética: Quais dados são realmente necessários para personalizar a música sem invadir a privacidade do usuário?	🟡 Se sobrar tempo
-Foco do MVP: Treino • Estudo • Relaxamento • Trabalho personalizado
-
-⚠️ Riscos identificados
-- Contexto de exercício não tem rótulo no dataset	(IMPACTO: ALTO) - Mitigação: Validar via GQ7 — proxy por escuta cega antes de depender dele
-- FC (frequência cardíaca) não separa foco de relaxamento	(IMPACTO ALTO) - Mitigação: Assumido no escopo; entrada manual ou heurística de horário para o eixo cognitivo
-- Restrições da API do Spotify (IMPACTO MÉDIO) - Mitigação: Índice offline já é independente da API; só a reprodução depende dela
-
-
-🛠️ Tecnologias
-(a definir conforme a análise avança — ex: Python, Pandas, Jupyter Notebook)
-
-
-📊 Análises e resultados
-Em andamento. esta seção será atualizada com o notebook, gráficos e principais insights assim que a análise do dataset estiver concluída.
-
-
-🚀 Como rodar o projeto
-(a preencher com os passos de instalação e execução assim que o notebook estiver pronto)
-
-
-📋 Gestão do projeto
-Board de desenvolvimento no Jira (projeto SD), brainstorming completo no Miro, python, panda.
-
-
-✍️ Autoria
-Desenvolvido por Jhessica Evelyn, Marjorie Mitzi, Breno dos Santos, Pedro Alvim e Vitor Gonçalves.
+Em desenvolvimento — consulte o documento de status para o andamento atualizado das guiding questions e das próximas etapas.
