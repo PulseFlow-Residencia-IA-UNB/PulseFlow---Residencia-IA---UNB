@@ -1,0 +1,10 @@
+# Dataset externo ao notebook (ver celula 8): cada pessoa coloca o CSV na pasta.
+dataset*.csv
+
+# Pagina local, fora do escopo do notebook
+index.html
+
+# Artefatos de execucao
+.ipynb_checkpoints/
+__pycache__/
+.conda/
