@@ -81,6 +81,6 @@ O MVP concentra-se em quatro contextos: **Treino, Estudo, Relaxamento e Trabalho
 
 Projeto feito por Jhessica Evelyn (@jhessevelyn), Breno dos Santos Guimarães (@Br3n0G)), Marjorie Mitzi (@Marjoriemitzi), Pedro Alvim (@PedroAlvimm), e Vitor Gonçalves (@vitorgandrade).
 
-## 📌 Status
+##  Status
 
 Em desenvolvimento — consulte o documento de status para o andamento atualizado das guiding questions e das próximas etapas.
