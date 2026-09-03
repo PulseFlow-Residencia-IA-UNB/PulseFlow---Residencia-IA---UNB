@@ -10,7 +10,7 @@
       
       
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../material/headphones">
       <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.1.11">
     
     
@@ -24,10 +24,6 @@
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.e6a45f82.min.css">
         
-          
-          
-          <meta name="theme-color" content="#000000">
-        
       
     
     
@@ -35,10 +31,12 @@
       
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font:"Montserrat";--md-code-font:"Roboto Mono"}</style>
       
     
+    
+      <link rel="stylesheet" href="../stylesheets/spotify-theme.css">
     
     <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -51,6 +49,8 @@
   
     
     
+      
+    
     
     
     
@@ -58,13 +58,15 @@
   
     
     
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
         
-        <a href="#inteligencia-analitica-e-eda" class="md-skip">
+        <a href="#inteligencia-analitica-eda" class="md-skip">
           Skip to content
         </a>
       
@@ -80,8 +82,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href=".." title="PulseFlow" class="md-header__button md-logo" aria-label="PulseFlow" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+  <img src="../material/spotify" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -104,6 +105,28 @@
       </div>
     </div>
     
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="green"  aria-label="Mudar para modo claro"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Mudar para modo claro" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="green"  aria-label="Mudar para modo escuro"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Mudar para modo escuro" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+            </label>
+          
+        
+      </form>
+    
     
     
       <label class="md-header__button md-icon" for="__search">
@@ -124,6 +147,8 @@
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
         </button>
       </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
       
     </form>
     <div class="md-search__output">
@@ -149,6 +174,65 @@
       
         
           
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href=".." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../produto/" class="md-tabs__link">
+      Visão de Produto e UX
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../investigacao/" class="md-tabs__link">
+      Investigação e Planejamento
+    </a>
+  </li>
+
+      
+        
+  
+  
+    
+  
+
+
+  <li class="md-tabs__item">
+    <a href="./" class="md-tabs__link md-tabs__link--active">
+      Inteligência Analítica
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+          
         
       
       <main class="md-main" data-md-component="main">
@@ -161,13 +245,16 @@
                   <div class="md-sidebar__inner">
                     
 
+  
 
-<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href=".." title="PulseFlow" class="md-nav__button md-logo" aria-label="PulseFlow" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+  <img src="../material/spotify" alt="logo">
 
     </a>
     PulseFlow
@@ -184,7 +271,7 @@
   
     <li class="md-nav__item">
       <a href=".." class="md-nav__link">
-        Resumo Executivo
+        Home
       </a>
     </li>
   
@@ -199,7 +286,7 @@
   
     <li class="md-nav__item">
       <a href="../produto/" class="md-nav__link">
-        Produto e UX
+        Visão de Produto e UX
       </a>
     </li>
   
@@ -214,7 +301,7 @@
   
     <li class="md-nav__item">
       <a href="../investigacao/" class="md-nav__link">
-        Planejamento e GQs
+        Investigação e Planejamento
       </a>
     </li>
   
@@ -237,61 +324,9 @@
         
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Inteligência Analítica
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="./" class="md-nav__link md-nav__link--active">
         Inteligência Analítica
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1-higienizacao-e-perfil-da-base" class="md-nav__link">
-    1. Higienização e Perfil da Base
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-feature-engineering-as-formulas-do-pulseflow" class="md-nav__link">
-    2. Feature Engineering (As Fórmulas do PulseFlow)
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-principais-descobertas-e-evidencias" class="md-nav__link">
-    3. Principais Descobertas e Evidências
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#visualizacao-de-catalogo-musical-e-distribuicao-tonal" class="md-nav__link">
-    Visualização de Catálogo Musical e Distribuição Tonal
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
       
     </li>
   
@@ -304,89 +339,29 @@
               </div>
             
             
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1-higienizacao-e-perfil-da-base" class="md-nav__link">
-    1. Higienização e Perfil da Base
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-feature-engineering-as-formulas-do-pulseflow" class="md-nav__link">
-    2. Feature Engineering (As Fórmulas do PulseFlow)
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-principais-descobertas-e-evidencias" class="md-nav__link">
-    3. Principais Descobertas e Evidências
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#visualizacao-de-catalogo-musical-e-distribuicao-tonal" class="md-nav__link">
-    Visualização de Catálogo Musical e Distribuição Tonal
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
           
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
                 
 
-<h1 id="inteligencia-analitica-e-eda">Inteligência Analítica e EDA</h1>
-<p>O motor do PulseFlow baseia-se no cruzamento de dados biométricos/contextuais com a taxonomia musical. A análise foi feita sobre o <strong>Spotify Tracks Dataset</strong>.</p>
-<h3 id="1-higienizacao-e-perfil-da-base">1. Higienização e Perfil da Base</h3>
-<p>A base inicial de 114.000 registros passou por deduplicação de catálogo, resultando em <strong>89.741 faixas únicas</strong>. Identificamos viés de popularidade e anomalias acústicas (ex: faixas rotuladas como <code>sleep</code> apresentando picos de volume de até -7.9 dB).</p>
-<p><img alt="Dashboard Analytics" src="assets/pulseflow_dashboard.jpg" /></p>
-<h3 id="2-feature-engineering-as-formulas-do-pulseflow">2. Feature Engineering (As Fórmulas do PulseFlow)</h3>
-<p>Para superar a ausência de rótulos de contexto, criamos índices determinísticos (<em>Hard Filters</em>) aplicados na sanitização:
-* <strong>CDI (Cognitive Distraction Index):</strong> <code>Speechiness * (1 - Instrumentalness) * Loudness_norm</code>. Mede o risco de quebra de foco por vocais audíveis e alta pressão sonora.
-* <strong>ACS (Acoustic Calm Score):</strong> <code>Acousticness * (1 - Energy) * (1 - Danceability)</code>. Valida a blindagem contra ruídos em estados de desaceleração.
-* <strong>DIS (Dynamic Intensity Score):</strong> Otimizado para Treino.</p>
-<h3 id="3-principais-descobertas-e-evidencias">3. Principais Descobertas e Evidências</h3>
-<ul>
-<li><strong>O Paradoxo Foco vs. Sono:</strong> O submodo de Programação atinge foco extremo combinando <em>alta energia (0.659)</em> com <em>alta instrumentalidade (0.832)</em>, provando que o fluxo não requer música lenta, mas sim baixo CDI (0.007).</li>
-<li><strong>Densidade de BPM no Treino:</strong> O modo Treino apresentou densidade de pico concentrada na faixa de <strong>125 a 135 BPM</strong>, casando perfeitamente com a cadência aeróbica padrão e FC em Zona 3, viabilizando o uso futuro do Smartwatch como controlador de transição.</li>
-<li><strong>Fronteiras Seguras de Sono:</strong> A aplicação da mediana do Score ACS extinguiu o risco de falsos positivos entre Sono e Treino, corrigindo as falhas humanas de categorização do Spotify.</li>
-</ul>
-<p><img alt="Gráficos EDA" src="assets/fig_distribuicoes.png" /></p>
-<p><em>O código completo de limpeza, processamento e modelagem pode ser encontrado no repositório em <code>src/notebooks/PulseFlow_Notebook_Corrigido.ipynb</code>.</em></p>
-<h3 id="visualizacao-de-catalogo-musical-e-distribuicao-tonal">Visualização de Catálogo Musical e Distribuição Tonal</h3>
-<p>Os painéis desenvolvidos permitem a análise em tempo real do perfil sonoro e recortes em foco (como Pop-film, K-pop, Chill).</p>
-<p><img alt="Painel de Catálogo Musical" src="assets/Screenshot from 2026-09-01 15-16-12.jpg" />
-<img alt="Distribuição Tonal e Duração x Popularidade" src="assets/Screenshot from 2026-09-01 15-16-15.jpg" /></p>
-<p><em>Os relatórios completos e documentos de status estão disponíveis na pasta <code>docs/documentos/</code> do repositório.</em></p>
+<h1 id="inteligencia-analitica-eda">Inteligência Analítica (EDA)</h1>
+<p>A análise foi conduzida sobre o Spotify Tracks Dataset, composto inicialmente por 114.000 registros balanceados em 114 gêneros. Após a limpeza e deduplicação, a base útil resultou em 89.741 faixas únicas. </p>
+<p><strong>Diagnóstico Geral do Catálogo</strong>
+* A popularidade média do dataset é de 33.2.
+* Os gêneros líderes em popularidade são pop-film, k-pop e chill.
+* O modo musical "Maior" domina a composição do catálogo, correspondendo a 63.7% das faixas (57,2 mil).
+* O bucket de duração ideal no catálogo se concentra entre 3 e 4 minutos, com popularidade média de 34.9.
+* Anomalias acústicas foram tratadas via Hard Filters: foram isoladas 41 faixas no gênero <code>sleep</code> com compressão agressiva (loudness &gt; -10 dB).</p>
+<p><strong>Feature Engineering: Fórmulas PulseFlow</strong>
+* <strong>Índice de Distração Cognitiva (CDI):</strong> Calculado como <code>Speechiness × (1 - Instrumentalness) × Loudness</code>. A métrica blinda tarefas lógicas limitando o CDI a menos de 0.015.
+* <strong>Score de Calma Acústica (ACS):</strong> Medido por <code>Acousticness × (1 - Energy) × (1 - Danceability)</code>.</p>
+<p><strong>Descobertas e Resultados de ML</strong>
+* A intuição falha ao presumir a instrumentalidade como o único divisor entre Foco e Sono; ambos os modos possuem medianas instrumentais elevadas (&gt; 0.87). A separabilidade real depende da pressão sonora (loudness) e da cadência rítmica (danceability).
+* A densidade de BPM no modo Treino concentra-se em 128 BPM, permitindo sincronização exata com o smartwatch (Zonas aeróbicas 3 e 4).
+* O classificador Random Forest atingiu um F1-Score ponderado de 0.7247, superando a baseline heurística (0.5488).
+* As features com maior Gini Importance foram Loudness (19.78%), Acousticness (15.81%) e Instrumentalness (14.88%).
+* A análise comprovou uma severa assimetria no custo do erro: prever acidentalmente uma faixa intensa de treino durante o sono causa rejeição imediata, exigindo penalidades de Cost-Sensitive Learning na função de perda.</p>
 
               
             </article>
@@ -400,7 +375,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../investigacao/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Planejamento e GQs" rel="prev">
+        <a href="../investigacao/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Investigação e Planejamento" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -409,7 +384,7 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Planejamento e GQs
+              Investigação e Planejamento
             </div>
           </div>
         </a>
@@ -437,7 +412,7 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.092fa1f6.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.sections", "toc.integrate", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.092fa1f6.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
       <script src="../assets/javascripts/bundle.5a9542cf.min.js"></script>

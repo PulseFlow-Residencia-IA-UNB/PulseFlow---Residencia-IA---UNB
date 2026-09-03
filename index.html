@@ -10,7 +10,7 @@
       
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="material/headphones">
       <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.1.11">
     
     
@@ -24,10 +24,6 @@
         
         <link rel="stylesheet" href="assets/stylesheets/palette.e6a45f82.min.css">
         
-          
-          
-          <meta name="theme-color" content="#000000">
-        
       
     
     
@@ -35,10 +31,12 @@
       
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font:"Montserrat";--md-code-font:"Roboto Mono"}</style>
       
     
+    
+      <link rel="stylesheet" href="stylesheets/spotify-theme.css">
     
     <script>__md_scope=new URL(".",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -51,6 +49,8 @@
   
     
     
+      
+    
     
     
     
@@ -58,13 +58,15 @@
   
     
     
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
         
-        <a href="#pulseflow-a-musica-certa-no-momento-certo" class="md-skip">
+        <a href="#pulseflow-residencia-em-ia-unb" class="md-skip">
           Skip to content
         </a>
       
@@ -80,8 +82,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="." title="PulseFlow" class="md-header__button md-logo" aria-label="PulseFlow" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+  <img src="material/spotify" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -97,12 +98,34 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Resumo Executivo
+              Home
             
           </span>
         </div>
       </div>
     </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="green"  aria-label="Mudar para modo claro"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Mudar para modo claro" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="green"  aria-label="Mudar para modo escuro"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Mudar para modo escuro" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+            </label>
+          
+        
+      </form>
     
     
     
@@ -124,6 +147,8 @@
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
         </button>
       </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
       
     </form>
     <div class="md-search__output">
@@ -149,6 +174,65 @@
       
         
           
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    
+  
+
+
+  <li class="md-tabs__item">
+    <a href="." class="md-tabs__link md-tabs__link--active">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="produto/" class="md-tabs__link">
+      Visão de Produto e UX
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="investigacao/" class="md-tabs__link">
+      Investigação e Planejamento
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="analise_dados/" class="md-tabs__link">
+      Inteligência Analítica
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+          
         
       
       <main class="md-main" data-md-component="main">
@@ -161,13 +245,16 @@
                   <div class="md-sidebar__inner">
                     
 
+  
 
-<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="." title="PulseFlow" class="md-nav__button md-logo" aria-label="PulseFlow" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+  <img src="material/spotify" alt="logo">
 
     </a>
     PulseFlow
@@ -193,12 +280,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Resumo Executivo
+          Home
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="." class="md-nav__link md-nav__link--active">
-        Resumo Executivo
+        Home
       </a>
       
         
@@ -217,29 +304,50 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#o-problema-context-switching" class="md-nav__link">
-    O Problema (Context Switching)
+  <a href="#o-problema-e-a-solucao" class="md-nav__link">
+    O Problema e a Solução
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#a-solucao" class="md-nav__link">
-    A Solução
+  <a href="#escopo-do-mvp-e-modos-operacionais" class="md-nav__link">
+    Escopo do MVP e Modos Operacionais
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#publico-alvo" class="md-nav__link">
-    Público-Alvo
+  <a href="#inteligencia-analitica-e-machine-learning" class="md-nav__link">
+    Inteligência Analítica e Machine Learning
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#metricas-de-sucesso" class="md-nav__link">
-    Métricas de Sucesso
+  <a href="#guiding-questions-cbl" class="md-nav__link">
+    Guiding Questions (CBL)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estrutura-do-repositorio" class="md-nav__link">
+    Estrutura do Repositório
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#como-executar" class="md-nav__link">
+    Como Executar
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#colaboradores" class="md-nav__link">
+    Colaboradores
   </a>
   
 </li>
@@ -261,7 +369,7 @@
   
     <li class="md-nav__item">
       <a href="produto/" class="md-nav__link">
-        Produto e UX
+        Visão de Produto e UX
       </a>
     </li>
   
@@ -276,7 +384,7 @@
   
     <li class="md-nav__item">
       <a href="investigacao/" class="md-nav__link">
-        Planejamento e GQs
+        Investigação e Planejamento
       </a>
     </li>
   
@@ -304,86 +412,102 @@
               </div>
             
             
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#o-problema-context-switching" class="md-nav__link">
-    O Problema (Context Switching)
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#a-solucao" class="md-nav__link">
-    A Solução
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#publico-alvo" class="md-nav__link">
-    Público-Alvo
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#metricas-de-sucesso" class="md-nav__link">
-    Métricas de Sucesso
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
           
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
                 
 
-<h1 id="pulseflow-a-musica-certa-no-momento-certo">PulseFlow: A música certa, no momento certo.</h1>
-<p>O <strong>PulseFlow</strong> é um sistema de música contextual que entende o que você faz, como você se sente e o que está ao redor para tocar a trilha sonora ideal para o seu momento.</p>
-<h3 id="o-problema-context-switching">O Problema (Context Switching)</h3>
-<p>Sistemas de recomendação atuais são estáticos. O usuário perde tempo escolhendo playlists e sofre com a quebra de fluxo: uma música com a "vibe" ou volume errado entra no meio de um treino ou trabalho focado, gerando frustração. </p>
-<h3 id="a-solucao">A Solução</h3>
-<p>Um <strong>Context Engine</strong> inteligente que combina sinais contextuais (horário, rotina, smartwatch) com atributos acústicos do Spotify Dataset. Em vez de prever gêneros musicais, o modelo garante adequação rítmica e cognitiva.</p>
-<h3 id="publico-alvo">Público-Alvo</h3>
-<ul>
-<li>Pessoas que necessitam de música no dia a dia para conduzir atividades.</li>
-<li>Usuários ativos do Spotify buscando curadoria ágil.</li>
-<li>Profissionais com rotina variada ou que dão aulas usando música.</li>
-</ul>
-<h3 id="metricas-de-sucesso">Métricas de Sucesso</h3>
-<ul>
-<li>Criação de um produto final viável (MVP).</li>
-<li>Uso contínuo da ferramenta.</li>
-<li>Queda na taxa de <em>skip</em> (pulos) logo após a troca automática de playlist.</li>
-</ul>
+<h1 id="pulseflow-residencia-em-ia-unb">PulseFlow — Residência em IA (UnB)</h1>
+<p><a href="https://github.com/PulseFlow-Residencia-IA-UNB/PulseFlow---Residencia-IA---UNB.git"><img alt="GitHub" src="https://img.shields.io/badge/Acessar-Repositório-181717?style=for-the-badge&amp;logo=github" /></a>
+<a href="#"><img alt="Spotify Analytics" src="https://img.shields.io/badge/Dashboard-Spotify_Analytics-1DB954?style=for-the-badge&amp;logo=spotify" /></a></p>
+<p>O <strong>PulseFlow</strong> é um sistema de playlist adaptativa que sugere músicas automaticamente de acordo com o <strong>contexto e a atividade do usuário</strong> (treino, estudo, relaxamento ou trabalho), usando o Spotify Dataset como base e, futuramente, sinais de smartwatch para refinar as recomendações. </p>
+<p>Projeto desenvolvido no âmbito da <strong>Residência em Inteligência Artificial</strong> (parceria com a UnB e Instituto Eldorado).</p>
 <hr />
-<p><strong>Autoria:</strong> Desenvolvido por Jhessica Evelyn, Marjorie Mitzi, Breno dos Santos, Pedro Alvim e Vitor Gonçalves (Residência IA - Turma 2 / Eldorado &amp; UnB).</p>
+<h2 id="o-problema-e-a-solucao">O Problema e a Solução</h2>
+<ul>
+<li><strong>O Problema (Context Switching):</strong> A sobrecarga cognitiva na seleção contínua de faixas e a ineficiência de playlists estáticas quando o indivíduo transita entre tarefas de alta concentração, relaxamento e atividade motora intensa.</li>
+<li><strong>A Solução:</strong> Um <em>Context Engine</em> preditivo que integra telemetria biométrica (Smartwatch) e atributos acústicos do Spotify Dataset para sintetizar dinamicamente a trilha sonora adequada ao estado mental e corporal do usuário, reduzindo interações manuais.</li>
+</ul>
+<h2 id="escopo-do-mvp-e-modos-operacionais">Escopo do MVP e Modos Operacionais</h2>
+<p>O MVP concentra-se em quatro contextos principais:
+1. <strong>Treino (High Energy):</strong> Carga acústica intensa para sincronização neuromuscular (alta energia &gt; 0.80, BPM médio de 129, loudness &gt; -6 dB).
+2. <strong>Estudo (Deep Work):</strong> Blindagem cognitiva e eliminação de distrações verbais (speechiness &lt; 0.08, alta instrumentalidade &gt; 0.85).
+3. <strong>Relaxamento / Sono:</strong> Desaceleração fisiológica (energia mínima &lt; 0.20, danceability &lt; 0.35, loudness &lt; -12 dB).
+4. <strong>Trabalho Personalizado:</strong> Adaptação da trilha ao tipo de trabalho, como programação, design, atendimento ou escritório.</p>
+<h2 id="inteligencia-analitica-e-machine-learning">Inteligência Analítica e Machine Learning</h2>
+<p>A investigação técnica revelou descobertas cruciais a partir do processamento do dataset original de 114.000 faixas (reduzido para 89.741 faixas únicas):</p>
+<ul>
+<li><strong>Modelagem:</strong> O modelo de Machine Learning Random Forest atingiu um F1-Score ponderado de 0.7247, superando a baseline heurística de 0.5488 em +32%.</li>
+<li><strong>Feature Importance:</strong> As variáveis acústicas mais determinantes para o modelo foram Loudness (19.78%), Acousticness (15.81%) e Instrumentalness (14.88%).</li>
+<li><strong>Fórmulas Proprietárias:</strong> Criação de métricas heurísticas para engenharia de features, como o <strong>Índice de Distração Cognitiva (CDI)</strong> e o <strong>Score de Calma Acústica (ACS)</strong>.</li>
+<li><strong>Assimetria de Custo do Erro:</strong> Tocar uma música acelerada durante o sono gera frustração severa (custo altíssimo), enquanto errar o BPM de um treino resulta apenas em um "skip" (custo baixo). O modelo aplica <em>Cost-Sensitive Learning</em> para penalizar falsos positivos de alta energia em modos calmos.</li>
+<li><strong>Ética e LGPD:</strong> O tratamento de dados biométricos (FC) contínuos é um dado sensível. O PulseFlow opera com inferência local (on-device) e exige consentimento explícito, minimizando a coleta de dados.</li>
+</ul>
+<h2 id="guiding-questions-cbl">Guiding Questions (CBL)</h2>
+<p>O desenvolvimento segue o Challenge Based Learning (CBL) e o CRISP-DM, guiado por perguntas norteadoras:</p>
+<ul>
+<li><strong>Dados:</strong> Quais os limiares numéricos de <em>energy</em> e <em>speechiness</em> que definem gêneros focados em relaxamento e estudo? O que separa focar de relaxar?</li>
+<li><strong>Usuários:</strong> As preferências musicais mudam de acordo com a atividade realizada?</li>
+<li><strong>Modelos:</strong> Como balancear Precision (não errar o Deep Work) vs. Recall? Todos os erros de contexto custam o mesmo?</li>
+<li><strong>Smartwatch:</strong> A combinação entre atividade e sinais pode decidir mudanças de intensidade musical?</li>
+<li><strong>Ética:</strong> Otimizar engajamento via perfis rotineiros pode aprisionar o usuário em uma bolha?</li>
+<li><strong>Produção:</strong> É melhor treinar um modelo único com a rotina como input, ou pipelines independentes?</li>
+</ul>
+<h2 id="estrutura-do-repositorio">Estrutura do Repositório</h2>
+<table>
+<thead>
+<tr>
+<th>Arquivo</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Análise de Dados do Spotify/</code></td>
+<td>Notebooks e materiais de exploração do Spotify Dataset</td>
+</tr>
+<tr>
+<td><code>PulseFlow_Notebook.ipynb</code></td>
+<td>Notebook principal de análise</td>
+</tr>
+<tr>
+<td><code>PulseFlow_Notebook_Corrigido.ipynb</code></td>
+<td>Versão revisada/corrigida do notebook principal</td>
+</tr>
+<tr>
+<td><code>PulseFlow_Notebook_PF16_Integrado.ipynb</code></td>
+<td>Notebook com a integração referente à etapa PF16</td>
+</tr>
+<tr>
+<td><code>PulseFlow_Status_Completo_e_Proximos_Passos.docx</code></td>
+<td>Status atual do projeto e próximos passos</td>
+</tr>
+<tr>
+<td><code>Relátorio PulseFlow.docx</code></td>
+<td>Relatório do projeto (Word)</td>
+</tr>
+<tr>
+<td><code>pulseflow-spotify-analytics-relatorio.pdf</code></td>
+<td>Relatório final em PDF</td>
+</tr>
+</tbody>
+</table>
+<h2 id="como-executar">Como Executar</h2>
+<ol>
+<li>
+<p>Clone o repositório:
+   ```bash
+   git clone <a href="https://github.com/PulseFlow-Residencia-IA-UNB/PulseFlow---Residencia-IA---UNB.git">https://github.com/PulseFlow-Residencia-IA-UNB/PulseFlow---Residencia-IA---UNB.git</a></p>
+</li>
+<li>
+<p>Abra os notebooks (<code>.ipynb</code>) no Jupyter ou Google Colab.</p>
+</li>
+<li>Consulte <code>PulseFlow_Status_Completo_e_Proximos_Passos.docx</code> para o status mais recente e os próximos passos planejados.</li>
+<li>Consulte o PDF equivalente para o relatório completo do projeto.</li>
+</ol>
+<h2 id="colaboradores">Colaboradores</h2>
+<p>Projeto feito por Jhessica Evelyn (@jhessevelyn), Breno dos Santos Guimarães (@Br3n0G), Marjorie Mitzi (@Marjoriemitzi), Pedro Alvim (@PedroAlvimm) e Vitor Gonçalves (@vitorgandrade).</p>
 
               
             </article>
@@ -398,13 +522,13 @@
       
       
         
-        <a href="produto/" class="md-footer__link md-footer__link--next" aria-label="Next: Produto e UX" rel="next">
+        <a href="produto/" class="md-footer__link md-footer__link--next" aria-label="Next: Visão de Produto e UX" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Produto e UX
+              Visão de Produto e UX
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -434,7 +558,7 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": ".", "features": [], "search": "assets/javascripts/workers/search.092fa1f6.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.tabs", "navigation.sections", "toc.integrate", "search.suggest", "search.highlight"], "search": "assets/javascripts/workers/search.092fa1f6.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
       <script src="assets/javascripts/bundle.5a9542cf.min.js"></script>
