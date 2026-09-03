@@ -1,32 +1,21 @@
-# Inteligência Analítica e EDA
+# Inteligência Analítica (EDA)
 
-O motor do PulseFlow baseia-se no cruzamento de dados biométricos/contextuais com a taxonomia musical. A análise foi feita sobre o **Spotify Tracks Dataset**.
+A análise foi conduzida sobre o Spotify Tracks Dataset, composto inicialmente por 114.000 registros balanceados em 114 gêneros. Após a limpeza e deduplicação, a base útil resultou em 89.741 faixas únicas. 
 
-### 1. Higienização e Perfil da Base
-A base inicial de 114.000 registros passou por deduplicação de catálogo, resultando em **89.741 faixas únicas**. Identificamos viés de popularidade e anomalias acústicas (ex: faixas rotuladas como `sleep` apresentando picos de volume de até -7.9 dB).
+**Diagnóstico Geral do Catálogo**
+* A popularidade média do dataset é de 33.2.
+* Os gêneros líderes em popularidade são pop-film, k-pop e chill.
+* O modo musical "Maior" domina a composição do catálogo, correspondendo a 63.7% das faixas (57,2 mil).
+* O bucket de duração ideal no catálogo se concentra entre 3 e 4 minutos, com popularidade média de 34.9.
+* Anomalias acústicas foram tratadas via Hard Filters: foram isoladas 41 faixas no gênero `sleep` com compressão agressiva (loudness > -10 dB).
 
-![Dashboard Analytics](assets/pulseflow_dashboard.jpg)
+**Feature Engineering: Fórmulas PulseFlow**
+* **Índice de Distração Cognitiva (CDI):** Calculado como `Speechiness × (1 - Instrumentalness) × Loudness`. A métrica blinda tarefas lógicas limitando o CDI a menos de 0.015.
+* **Score de Calma Acústica (ACS):** Medido por `Acousticness × (1 - Energy) × (1 - Danceability)`.
 
-### 2. Feature Engineering (As Fórmulas do PulseFlow)
-Para superar a ausência de rótulos de contexto, criamos índices determinísticos (*Hard Filters*) aplicados na sanitização:
-* **CDI (Cognitive Distraction Index):** `Speechiness * (1 - Instrumentalness) * Loudness_norm`. Mede o risco de quebra de foco por vocais audíveis e alta pressão sonora.
-* **ACS (Acoustic Calm Score):** `Acousticness * (1 - Energy) * (1 - Danceability)`. Valida a blindagem contra ruídos em estados de desaceleração.
-* **DIS (Dynamic Intensity Score):** Otimizado para Treino.
-
-### 3. Principais Descobertas e Evidências
-
-* **O Paradoxo Foco vs. Sono:** O submodo de Programação atinge foco extremo combinando *alta energia (0.659)* com *alta instrumentalidade (0.832)*, provando que o fluxo não requer música lenta, mas sim baixo CDI (0.007).
-* **Densidade de BPM no Treino:** O modo Treino apresentou densidade de pico concentrada na faixa de **125 a 135 BPM**, casando perfeitamente com a cadência aeróbica padrão e FC em Zona 3, viabilizando o uso futuro do Smartwatch como controlador de transição.
-* **Fronteiras Seguras de Sono:** A aplicação da mediana do Score ACS extinguiu o risco de falsos positivos entre Sono e Treino, corrigindo as falhas humanas de categorização do Spotify.
-
-![Gráficos EDA](assets/fig_distribuicoes.png)
-
-*O código completo de limpeza, processamento e modelagem pode ser encontrado no repositório em `src/notebooks/PulseFlow_Notebook_Corrigido.ipynb`.*
-
-### Visualização de Catálogo Musical e Distribuição Tonal
-Os painéis desenvolvidos permitem a análise em tempo real do perfil sonoro e recortes em foco (como Pop-film, K-pop, Chill).
-
-![Painel de Catálogo Musical](assets/Screenshot from 2026-09-01 15-16-12.jpg)
-![Distribuição Tonal e Duração x Popularidade](assets/Screenshot from 2026-09-01 15-16-15.jpg)
-
-*Os relatórios completos e documentos de status estão disponíveis na pasta `docs/documentos/` do repositório.*
+**Descobertas e Resultados de ML**
+* A intuição falha ao presumir a instrumentalidade como o único divisor entre Foco e Sono; ambos os modos possuem medianas instrumentais elevadas (> 0.87). A separabilidade real depende da pressão sonora (loudness) e da cadência rítmica (danceability).
+* A densidade de BPM no modo Treino concentra-se em 128 BPM, permitindo sincronização exata com o smartwatch (Zonas aeróbicas 3 e 4).
+* O classificador Random Forest atingiu um F1-Score ponderado de 0.7247, superando a baseline heurística (0.5488).
+* As features com maior Gini Importance foram Loudness (19.78%), Acousticness (15.81%) e Instrumentalness (14.88%).
+* A análise comprovou uma severa assimetria no custo do erro: prever acidentalmente uma faixa intensa de treino durante o sono causa rejeição imediata, exigindo penalidades de Cost-Sensitive Learning na função de perda.

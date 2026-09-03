@@ -1,8 +1,5 @@
 # PulseFlow — Residência em IA (UnB)
 
-[![GitHub](https://img.shields.io/badge/Acessar-Repositório-181717?style=for-the-badge&logo=github)](https://github.com/PulseFlow-Residencia-IA-UNB/PulseFlow---Residencia-IA---UNB.git)
-[![Spotify Analytics](https://img.shields.io/badge/Dashboard-Spotify_Analytics-1DB954?style=for-the-badge&logo=spotify)](#)
-
 O **PulseFlow** é um sistema de playlist adaptativa que sugere músicas automaticamente de acordo com o **contexto e a atividade do usuário** (treino, estudo, relaxamento ou trabalho), usando o Spotify Dataset como base e, futuramente, sinais de smartwatch para refinar as recomendações. 
 
 Projeto desenvolvido no âmbito da **Residência em Inteligência Artificial** (parceria com a UnB e Instituto Eldorado).
@@ -65,6 +62,6 @@ O desenvolvimento segue o Challenge Based Learning (CBL) e o CRISP-DM, guiado po
 3. Consulte `PulseFlow_Status_Completo_e_Proximos_Passos.docx` para o status mais recente e os próximos passos planejados.
 4. Consulte o PDF equivalente para o relatório completo do projeto.
 
-##  Colaboradores
+## Colaboradores
 
 Projeto feito por Jhessica Evelyn (@jhessevelyn), Breno dos Santos Guimarães (@Br3n0G), Marjorie Mitzi (@Marjoriemitzi), Pedro Alvim (@PedroAlvimm) e Vitor Gonçalves (@vitorgandrade).

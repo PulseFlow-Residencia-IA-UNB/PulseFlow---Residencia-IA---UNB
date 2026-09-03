@@ -1,28 +1,20 @@
-# Planejamento, Canvas e Investigação (CBL)
+# Investigação e Metodologia
 
-Baseado na metodologia *Challenge Based Learning*, o desenvolvimento foi norteado pela definição estrita do problema e levantamento de evidências. Gestão de backlog e design foram conduzidos via Jira e Miro.
+O desenvolvimento é estruturado no método Challenge Based Learning (CBL) integrado ao ciclo de vida de Ciência de Dados (CRISP-DM).
 
-### Escopo (TRATA / NÃO TRATA)
-* **O SISTEMA TRATA:** Seleção contínua de faixas pré-indexadas por características acústicas; adaptação para contextos de escuta inferidos por biometria (smartwatch); reprodução via Spotify Premium.
-* **O SISTEMA NÃO TRATA:** Geração de áudio por IA; recomendação colaborativa entre usuários (não expande o gosto, apenas reordena o conhecido); automação clínica; inferência de humor sem contexto; usuários sem wearable.
+**Objetivos e Escopo**
+* **Objetivo de negócio:** Aumentar a adequação da experiência musical ao contexto atual e reduzir as interações manuais e skips.
+* **Objetivo de ML:** Classificar músicas de acordo com sua adequação aos contextos, utilizando Macro F1 para classificação e Precision@10 para ranking.
+* O sistema **TRATA** a recomendação musical baseada no Spotify Dataset e dados de contexto do usuário.
+* O sistema **NÃO TRATA** diagnósticos médicos, automação clínica em ambientes críticos, ou recomendação colaborativa entre diferentes usuários.
 
-### Guiding Questions (Matriz de Priorização)
+**Guiding Questions (Matriz de Priorização)**
+* **Responder JÁ (Alto Impacto / Fácil):** Identificar características musicais por modo (GQ1), investigar mudanças de preferência por atividade (GQ2) e variações no perfil de trabalho (GQ3).
+* **Planejar (Alto Impacto / Difícil):** Integração com smartwatch (GQ4) e avaliação do modelo vs. seleção aleatória (GQ6).
+* **Se sobrar tempo:** Limites éticos de coleta de dados (GQ7).
+* **Cortar sem dó:** Detecção de conversa no ambiente para redução de volume (GQ5).
 
-**🟢 Responder JÁ (Must Have - Alto Impacto / Fácil)**
-1. **Dados:** Quais limiares numéricos (quartis, medianas) definem gêneros focados em relaxamento e estudo?
-2. **Modelo:** O dataset não tem exercício rotulado. Que proxy usar e como validar?
-3. **Usuário:** Como o motor resolve a variabilidade inter-usuário (ex: o que é alta energia para um, é barulho para outro)?
-
-**🟡 Planejar (Should Have - Alto Impacto / Difícil)**
-4. **Smartwatch:** Sinais de frequência cardíaca e cadência podem ajudar a decidir quando alterar a intensidade da música?
-5. **Modelo:** Como balancear as métricas de Precision (não errar no Deep Work) vs Recall?
-
-**🔵 Se Sobrar Tempo (Could Have - Baixo Impacto / Fácil)**
-6. **Ética:** Quais dados são realmente necessários para personalizar a música sem invadir a privacidade (LGPD)?
-
-**🔴 Cortar Sem Dó (Won't Have - Baixo Impacto / Difícil)**
-7. **Ambiente:** Em quais situações a detecção de conversa próxima deve reduzir o volume sem atrapalhar a experiência? (Complexidade de UX/Permissões alta para o MVP).
-
-### Gestão do Projeto (Jira)
-O acompanhamento das tarefas (criação de repositório, formulários, protótipos e refatoração de dados) foi realizado via Kanban:
-![Board Jira Tarefas Pendentes e Concluídas](assets/Screenshot from 2026-08-28 11-04-04.png)
+**Governança e LGPD**
+* A coleta de telemetria (frequência cardíaca) é classificada como tratamento de dados pessoais sensíveis pelo Artigo 5º da LGPD.
+* A pesquisa com usuários indicou que 79.5% dos respondentes não se sentem desconfortáveis em compartilhar esses sinais para essa finalidade específica.
+* O sistema opera com inferência processada localmente (Edge/Mobile) e exige consentimento explícito, sem armazenamento contínuo na nuvem.

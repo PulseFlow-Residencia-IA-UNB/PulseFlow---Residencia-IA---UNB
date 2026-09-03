@@ -1,13 +1,39 @@
 site_name: PulseFlow
 site_description: A música certa, no momento certo.
+
 theme:
   name: material
+  logo: material/spotify 
+  favicon: material/headphones 
+  font:
+    text: Montserrat 
+    code: Roboto Mono
+  features:
+    - navigation.tabs 
+    - navigation.sections
+    - toc.integrate
+    - search.suggest
+    - search.highlight
   palette:
-    scheme: slate
-    primary: black
-    accent: green
+    
+    - scheme: slate
+      primary: black
+      accent: green
+      toggle:
+        icon: material/toggle-switch
+        name: Mudar para modo claro
+    - scheme: default
+      primary: white
+      accent: green
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Mudar para modo escuro
+
+extra_css:
+  - stylesheets/spotify-theme.css
+
 nav:
-  - Resumo Executivo: index.md
-  - Produto e UX: produto.md
-  - Planejamento e GQs: investigacao.md
+  - Home: index.md
+  - Visão de Produto e UX: produto.md
+  - Investigação e Planejamento: investigacao.md
   - Inteligência Analítica: analise_dados.md
